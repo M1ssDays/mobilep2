@@ -3,40 +3,27 @@ import { TouchableOpacity, StyleSheet, Image, Text } from "react-native";
 
 interface Props {
 URLHH?: string
-textoHH: string;
 onPressHH?: () => void;
 }
 
-
-export default function AlbumButton(props:Props){
+export default function IconButton(props:Props){
     return(
         <TouchableOpacity style={styles.container} onPress={props.onPressHH}>
             <Image 
             style = {styles.image}
             source = {{uri: props.URLHH}}/>
-            <Text style = {styles.text}>{props.textoHH}</Text>
         </TouchableOpacity>
     );
 }
 
 const styles = StyleSheet.create({
     container:{
-        height: 75,
-        width: 180,
-        borderRadius: 10,
-        backgroundColor: '#303030',
-        flexDirection: "row",
-        gap: 5
+        height: 35,
+        width: 35,
     },
 
     image:{
-        borderRadius: 10,
-        height: '100%',
-        width: '33%'
+        height: 35,
+        width: 35
     },
-
-    text:{
-        fontSize: 16,
-        color: '#fff'
-    }
 });

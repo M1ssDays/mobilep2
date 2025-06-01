@@ -1,3 +1,4 @@
+import React from "react";
 import { TouchableOpacity, StyleSheet, Image, Text } from "react-native";
 
 export default function PodcastButton(){
@@ -11,7 +12,7 @@ export default function PodcastButton(){
 
 const styles = StyleSheet.create({
     container:{
-
+        
     },
 
     image:{
