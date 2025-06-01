@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 export default function SearchScreenHH() {
     return (
         <View style={styles.containerHH}>
-            <Text style={styles.textHH}>Tela de Busca</Text>
+            <Text style={styles.textHH}>Premium, não tenho, não tenho referencias nem nada, obrigado pela atenção</Text>
             <StatusBar style="auto" />
         </View>
     );

@@ -6,9 +6,9 @@ import Produto from '../../components/MusicaCard'
 import { musicasDataHH } from '../../components/musicas';
 import AlbumButton from '../../assets/components/AlbumButton'
 import IconButton from '../../assets/components/IconButton'
-import PodcastButton from '../assets/components/PodcastButton'
+import PodcastButton from '../../assets/components/PodcastButton'
+import { router } from 'expo-router';
 
-//const renderizarMusicasHH = ({item}: { item: typeof musicas})
 
 export default function HomeHH() {
 
@@ -28,9 +28,11 @@ export default function HomeHH() {
       <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
         <Text style={styles.titleHH}>Boa tarde</Text>
         <View style={{flexDirection: 'row', padding: 20, gap: 10}}>
+            <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/appointment-reminders--v2.png "/>
             <IconButton URLHH = "https://img.icons8.com/m_outlined/200/FFFFFF/clock.png"/>
-            <IconButton URLHH = "https://img.icons8.com/m_outlined/200/FFFFFF/clock.png"/>
-            <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/settings.png"/>
+            <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/settings.png"
+              onPressHH={() => router.push('/settings')}
+            />
         </View>
       </View>
 

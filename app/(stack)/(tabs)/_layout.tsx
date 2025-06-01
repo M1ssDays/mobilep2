@@ -3,20 +3,19 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons'; 
 
-
 export default function TabsLayoutHH(){
     return(
         <Tabs
             screenOptions={{
                 headerShown: false,
-                tabBarActiveTintColor: '#1DB954',
+                tabBarActiveTintColor: '#1DB954', 
                 tabBarInactiveTintColor: '#B3B3B3',
                 tabBarStyle: styles.tabBarHH,
                 tabBarLabelStyle: styles.tabBarLabelHH,
             }}
         >
             <Tabs.Screen
-                name="index"
+                name="index" 
                 options={{
                     title: 'Início',
                     tabBarIcon: ({ color }) => <MaterialIcons name="home" size={24} color={color} />,
@@ -24,10 +23,18 @@ export default function TabsLayoutHH(){
             />
 
             <Tabs.Screen
-                name="Sua Biblioteca"
+                name="search" 
+                options={{
+                    title: 'Buscar',
+                    tabBarIcon: ({ color }) => <MaterialIcons name="search" size={24} color={color} />,
+                }}
+            />
+
+            <Tabs.Screen
+                name="library" 
                 options={{
                     title:'Sua Biblioteca',
-                    tabBarIcon: ({ color }) => <MaterialIcons name="home" size={24} color={color} />,
+                    tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={24} color={color} />, 
                 }}
             />
         </Tabs>
@@ -46,4 +53,4 @@ const styles = StyleSheet.create({
         fontSize: 12,
         marginBottom: 5,
     },
-})
+});
