@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Dimensions, FlatList } from 'react-native'
+import { StyleSheet, Text, View, Dimensions, ScrollView, FlatList } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient'
 import Produto from '../../components/MusicaCard'
 import { musicasDataHH } from '../../components/musicas';
 import AlbumButton from '../../assets/components/AlbumButton'
 import IconButton from '../../assets/components/IconButton'
-
-//detalhe para a inserção de props: para usar uma imagem da internet, use a prop URLHH. para uma imagem local, use ImagemLocalHH.
+import PodcastButton from '../assets/components/PodcastButton'
 
 //const renderizarMusicasHH = ({item}: { item: typeof musicas})
 
@@ -26,16 +25,16 @@ export default function HomeHH() {
     style={styles.containerHH}
     >
       
-      <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%', padding: 20}}>
+      <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
         <Text style={styles.titleHH}>Boa tarde</Text>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row', padding: 20, gap: 10}}>
             <IconButton URLHH = "https://img.icons8.com/m_outlined/200/FFFFFF/clock.png"/>
             <IconButton URLHH = "https://img.icons8.com/m_outlined/200/FFFFFF/clock.png"/>
             <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/settings.png"/>
         </View>
       </View>
 
-      <View style={{flexDirection: 'row', gap: 10}}>
+      <View style={styles.viewGenericaHH}>
        {/* <FlatList
           data={musicasinicioHH}
           keyExtractor={(item) => item.id}
@@ -52,7 +51,7 @@ export default function HomeHH() {
         onPressHH={() => alert("apertou")}
         />
       </View>
-      <View style={{flexDirection: 'row', gap: 10}}>
+      <View style={styles.viewGenericaHH}>
         <AlbumButton
         textoHH = "epic"
         URLHH = "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
@@ -64,6 +63,34 @@ export default function HomeHH() {
         onPressHH={() => alert("apertou")}
         />
       </View>
+
+      <Text style={styles.titleHH}>Episódios para você</Text>
+      <View style={styles.viewGenericaHH}>
+        <PodcastButton
+        URLHH = "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+        tituloHH = 'Omniscient Reader'
+        subtituloHH = 'A novel virou real e só eu tinha lido'
+        />
+        <PodcastButton
+        URLHH = "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+        tituloHH = 'Magnus Archives'
+        subtituloHH= 'Tinham documentos sobrenaturais na biblioteca'
+        />
+      </View>
+
+      <Text style={styles.titleHH}>Recomendado para hoje</Text>
+      <View style={styles.viewGenericaHH}>
+        <PodcastButton
+        URLHH = "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+        tituloHH = 'Hollow Knight: Gods & Nightmares'
+        subtituloHH = ''
+        />
+        <PodcastButton
+        URLHH = "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+        tituloHH = 'O Segredo Na Ilha'
+        subtituloHH= ''
+        />
+      </View>
       <StatusBar style="auto" />
     </LinearGradient>
   );
@@ -73,16 +100,16 @@ const styles = StyleSheet.create({
   containerHH: {
     flex: 1,
     alignItems: 'center',
-    // justifyContent: 'center',
-    width: '100%',
-    height: '100%',
     gap: 10,
   },
 
   titleHH:{
     fontSize: 28,
     fontWeight: 700,
-    color: '#fff'
+    color: '#fff',
+    alignSelf: 'flex-start',
+    marginTop: 20,
+    marginLeft: 20
   },
 
   iconbarHH:{
@@ -91,6 +118,10 @@ const styles = StyleSheet.create({
     height: 100
   },
 
+  viewGenericaHH:{
+    flexDirection: 'row', 
+    gap: 15,
+  }
 });
 
 console.log(Dimensions.get('window'));
