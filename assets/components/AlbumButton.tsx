@@ -7,7 +7,6 @@ textoHH: string;
 onPressHH?: () => void;
 }
 
-
 export default function AlbumButton(props:Props){
     return(
         <TouchableOpacity style={styles.container} onPress={props.onPressHH}>
@@ -26,13 +25,14 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#303030',
         flexDirection: "row",
-        gap: 5
+        gap: 5,
+        alignItems: 'center'
     },
 
     image:{
         borderRadius: 10,
-        height: '100%',
-        width: '33%'
+        height: 75,
+        width: 75
     },
 
     text:{
