@@ -1,9 +1,9 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, ImageSourcePropType, StyleSheet, Text, View } from "react-native";
 
 
 type DadosMusicaHH = {
-    urlHH?: string;
+    urlHH: ImageSourcePropType;
     tituloHH?: string;
     artistaHH?: string;
 };
@@ -11,7 +11,7 @@ type DadosMusicaHH = {
 export default function MusicaHH({urlHH, artistaHH, tituloHH}: DadosMusicaHH){
     return(
         <View style={styles.cardHH}>
-            <Image source={{uri: urlHH}} style={styles.imagemHH}/>
+            {urlHH && <Image source={urlHH} style={styles.imagemHH}/>}
 
             <View>
                 <Text style={styles.tituloHH}>{tituloHH}</Text>
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
         padding:10,
         borderRadius:10,
         marginBottom:10,
+
     },
     imagemHH:{
         width: 60,
@@ -42,6 +43,7 @@ const styles = StyleSheet.create({
         color: '#fff'
     },
     artistaHH:{
-
+        fontSize: 14,
+        color: '#ccc',
     },
 })

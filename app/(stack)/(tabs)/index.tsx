@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, Dimensions, FlatList } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import Produto from '../components/Produto'
-import { musicasHH } from '../components/musicas';
-import AlbumButton from '../assets/components/AlbumButton'
-import IconButton from '../assets/components/IconButton'
+import Produto from '../../components/MusicaCard'
+import { musicasDataHH } from '../../components/musicas';
+import AlbumButton from '../../assets/components/AlbumButton'
+import IconButton from '../../assets/components/IconButton'
 
 //detalhe para a inserção de props: para usar uma imagem da internet, use a prop URLHH. para uma imagem local, use ImagemLocalHH.
 
-export default function App() {
+//const renderizarMusicasHH = ({item}: { item: typeof musicas})
 
-  const [buscaHH, setBuscaHH] = useState('');
+export default function HomeHH() {
 
-  
+  const musicasinicioHH: ArrayLike<any> | null | undefined = [
+
+  ]
+
   return(
     <LinearGradient
     colors={['rgba(25, 20, 20, 1)', 'rgba(80, 80, 80, 1)']}
@@ -33,6 +36,11 @@ export default function App() {
       </View>
 
       <View style={{flexDirection: 'row', gap: 10}}>
+       {/* <FlatList
+          data={musicasinicioHH}
+          keyExtractor={(item) => item.id}
+         renderItem={({item}) => <musicasDataHH urlHH={item.urlHH} tituloHH={item.tituloHH} artistaHH={item.artistaHH}}
+        />*/}
         <AlbumButton
         textoHH = "epic"
         URLHH = "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
