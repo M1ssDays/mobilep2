@@ -6,7 +6,7 @@ import AlbumButton from '../assets/components/AlbumButton'
 import IconButton from '../assets/components/IconButton'
 import PodcastButton from '../assets/components/PodcastButton'
 
-export default function App() {
+export default function Menu() {
 
   return(
     <LinearGradient
