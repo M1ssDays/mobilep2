@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
+import Produto from '../components/Produto'
+import { musicasHH } from '../components/musicas';
 import AlbumButton from '../assets/components/AlbumButton'
 import IconButton from '../assets/components/IconButton'
 
@@ -9,6 +11,9 @@ import IconButton from '../assets/components/IconButton'
 
 export default function App() {
 
+  const [buscaHH, setBuscaHH] = useState('');
+
+  
   return(
     <LinearGradient
     colors={['rgba(25, 20, 20, 1)', 'rgba(80, 80, 80, 1)']}
@@ -21,7 +26,7 @@ export default function App() {
       <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%', padding: 20}}>
         <Text style={styles.titleHH}>Boa tarde</Text>
         <View style={{flexDirection: 'row'}}>
-            <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/appointment-reminders--v2.png"/>
+            <IconButton URLHH = "https://img.icons8.com/m_outlined/200/FFFFFF/clock.png"/>
             <IconButton URLHH = "https://img.icons8.com/m_outlined/200/FFFFFF/clock.png"/>
             <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/settings.png"/>
         </View>
