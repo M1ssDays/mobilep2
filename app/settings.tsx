@@ -2,10 +2,8 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient'
-import AlbumButton from '../assets/components/ConfigButton'
 import ConfigButton from '../assets/components/ConfigButton';
-
-//detalhe para a inserção de props: para usar uma imagem da internet, use a prop URLHH. para uma imagem local, use ImagemLocalHH.
+import ProfileButton from '../assets/components/ProfileButton';
 
 export default function App() {
 
@@ -18,12 +16,19 @@ export default function App() {
     style={styles.containerHH}
     >
     
-    <View style={{padding: 20, display: 'flex', flexDirection: 'row', width: 170, height: 30, justifyContent: 'space-between'}}>
+    <View style={{margin: 20, display: 'flex', flexDirection: 'row', width: '60%', height: 30, justifyContent: 'space-between', alignItems: 'center', alignSelf: 'flex-start'}}>
         <TouchableOpacity onPress={()=> {}}>
             <Image source={{uri: 'https://streamline.imgix.net/3b6a532d-fc58-426a-b477-97183707d511/297c327f-b5de-415f-bfd9-2ff95f2deb6a/icon-arrows.png?ixlib=rb-1.1.0&or=0&w=720&h=720&fit=max&auto=format%2Ccompress&s=f271566223602ad361e105be2ad41716'}} style={{width: 20, height: 20, transform: [{ scaleX: -1 }]}}/>
         </TouchableOpacity>
         <Text style={styles.titleHH}>Configurar</Text>
     </View>
+
+    <ProfileButton
+    URLHH='https://yt3.googleusercontent.com/ytc/AIdro_l_0RH7fBbJuJ227nz-WUdobkVIEexa-2w0fc0XHzvtA-g=s160-c-k-c0x00ffffff-no-rj'
+    tituloHH='duccline'
+    subtituloHH='Ver perfil'
+    onPressHH={()=> {}}
+    />
 
     <View style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
         <ConfigButton textHH='Conta'/>
@@ -53,8 +58,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 600,
     color: '#fff',
-    alignSelf: 'flex-start',
-    marginTop: 20,
     marginLeft: 20
   },
 

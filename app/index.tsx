@@ -6,8 +6,6 @@ import AlbumButton from '../assets/components/AlbumButton'
 import IconButton from '../assets/components/IconButton'
 import PodcastButton from '../assets/components/PodcastButton'
 
-//detalhe para a inserção de props: para usar uma imagem da internet, use a prop URLHH. para uma imagem local, use ImagemLocalHH.
-
 export default function App() {
 
   return(
