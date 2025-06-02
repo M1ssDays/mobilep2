@@ -7,31 +7,38 @@ import PodcastButtonHH from '../../assets/components/Buttons/PodcastButton';
 import AlbumButton from '../../assets/components/Buttons/AlbumButton';
 import { router } from 'expo-router';
 
+const localPlaceholderImage = require('../../assets/images/placeholder.png');
+const balela = require('../../assets/images/balela.jpg');
+const orv = require('../../assets/images/ovr.jpg');
+const magnum = require('../../assets/images/magnun.jpg');
+const roxana = require('../../assets/images/roxana.jpg');
+const hollow = require('../../assets/images/hollow knight.jpg');
+const epic = require('../../assets/images/epic.jpg');
+const saint = require('../../assets/images/saintjuvi.jpg');
 
 const episodiosDataHH = [
-    { idHH: 'epi1', coverHH: '../', titleHH: 'Podcast Show', artistHH: 'Host Fictício' },
-    { idHH: 'epi2', coverHH: 'https://via.placeholder.com/150/00FF00/FFFFFF?text=EPI2', titleHH: 'Daily Boost', artistHH: 'Notícias Rápidas' },
-    { idHH: 'epi3', coverHH: 'https://via.placeholder.com/150/0000FF/FFFFFF?text=EPI3', titleHH: 'Entrevistas Top', artistHH: 'Jornalista XPTO' },
-    { idHH: 'epi4', coverHH: 'https://via.placeholder.com/150/FF0000/FFFFFF?text=EPI4', titleHH: 'Outro Show', artistHH: 'Outro Host' },
-    { idHH: 'epi5', coverHH: 'https://via.placeholder.com/150/00FF00/FFFFFF?text=EPI5', titleHH: 'Mais um Podcast', artistHH: 'Mais Um' },
+    { idHH: 'epi1', coverHH:  balela, titleHH: 'Balela podcast ep 1', artistHH: 'Calango' },
+    { idHH: 'epi2', coverHH: orv, titleHH: 'Omniscient Reader ', artistHH: 'Spoiler' },
+    { idHH: 'epi3', coverHH:  magnum, titleHH: 'Magnum Archives ', artistHH: 'Magnum' },
+    { idHH: 'epi4', coverHH: roxana, titleHH: 'Roxana ep 49', artistHH: 'Roxana' },
+    { idHH: 'epi5', coverHH: hollow, titleHH: 'Hollow Knight ep 10', artistHH: 'Team Cherry' },
 ];
 
 const recomendadosDataHH = [
-    { idHH: 'rec1', coverHH: 'https://via.placeholder.com/60/FFFF00/000000?text=MUSICA1', titleHH: 'Shy Away', subtitleHH: 'Twenty One Pilots' },
-    { idHH: 'rec2', coverHH: 'https://via.placeholder.com/60/FF00FF/000000?text=MUSICA2', titleHH: 'Blinding Lights', subtitleHH: 'The Weeknd' },
-    { idHH: 'rec3', coverHH: 'https://via.placeholder.com/60/00FFFF/000000?text=MUSICA3', titleHH: 'Levitating', subtitleHH: 'Dua Lipa' },
-    { idHH: 'rec4', coverHH: 'https://via.placeholder.com/60/FF8800/FFFFFF?text=MUSICA4', titleHH: 'Drivers License', subtitleHH: 'Olivia Rodrigo' },
-    { idHH: 'rec5', coverHH: 'https://via.placeholder.com/60/0000FF/FFFFFF?text=MUSICA5', titleHH: 'Save Your Tears', subtitleHH: 'The Weeknd' },
-    { idHH: 'rec6', coverHH: 'https://via.placeholder.com/60/000000/FFFF00?text=MUSICA6', titleHH: 'Good 4 u', subtitleHH: 'Olivia Rodrigo' },
+    { idHH: 'rec1', coverHH: epic, titleHH: 'Suffering', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec2', coverHH: epic, titleHH: 'Different Beast', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec3', coverHH: epic, titleHH: 'Scylla', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec4', coverHH: epic, titleHH: 'Mutiny', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec5', coverHH: epic, titleHH: 'Thunder Bringer', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec6', coverHH: saint, titleHH: 'Lembranças', subtitleHH: 'Jorge Rivera-Herrans' },
 ];
 
 const musicasBoaTardeDataHH = [
-    { idHH: 'bt1', coverHH: 'https://via.placeholder.com/60/FF0000/FFFFFF?text=COLDPLAY', titleHH: 'Yellow', subtitleHH: 'Coldplay' },
-    { idHH: 'bt2', coverHH: 'https://via.placeholder.com/60/0000FF/FFFFFF?text=BEATLES', titleHH: 'Here Comes The Sun', subtitleHH: 'The Beatles' },
-    { idHH: 'bt3', coverHH: 'https://via.placeholder.com/60/00FF00/FFFFFF?text=QUEEN', titleHH: 'Bohemian Rhapsody', subtitleHH: 'Queen' },
-    { idHH: 'bt4', coverHH: 'https://via.placeholder.com/60/FFFF00/000000?text=ELVIS', titleHH: 'Cant Help Falling in Love', subtitleHH: 'Elvis Presley' },
+    { idHH: 'bt1', coverHH: saint, titleHH: 'Sangue', subtitleHH: 'Saint Juvi' },
+    { idHH: 'bt2', coverHH: saint, titleHH: 'Faça Eles Sentirem', subtitleHH: 'Saint Juvi' },
+    { idHH: 'bt3', coverHH: saint, titleHH: 'Gal', subtitleHH: 'Saint Juvi' },
+    { idHH: 'bt4', coverHH: saint, titleHH: 'Enpap', subtitleHH: 'Saint Juvi' },
 ];
-
 
 export default function HomeHH() {
 
@@ -128,6 +135,7 @@ const styles = StyleSheet.create({
     },
     horizontalListContainerHH: {
         paddingHorizontal: 15,
+        gap: 15,
     },
     gridListContainerHH: {
         paddingHorizontal: 10,

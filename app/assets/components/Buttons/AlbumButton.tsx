@@ -13,7 +13,6 @@ export default function AlbumButton({ albumCoverUrlHH, albumTitleHH, artistNameH
         <TouchableOpacity style={styles.containerHH} onPress={onPressHH}>
             <Image
                 style = {styles.imageHH}
-                // Corrected line: Use the destructured 'albumCoverUrlHH' directly
                 source = {albumCoverUrlHH || require('../../images/placeholder.png')}
             />
             <Text style = {styles.textHH}>{albumTitleHH}</Text>
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#303030',
         flexDirection: "row",
-        gap: 5,
+        gap: 10,
         alignItems: 'center',
         overflow: 'hidden'
     },
