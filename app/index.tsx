@@ -2,9 +2,9 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient'
-import AlbumButton from '../assets/components/AlbumButton'
-import IconButton from '../assets/components/IconButton'
-import PodcastButton from '../assets/components/PodcastButton'
+import AlbumButton from '../assets/components/Buttons/AlbumButton'
+import IconButton from '../assets/components/Buttons/IconButton'
+import PodcastButton from '../assets/components/Buttons/PodcastButton'
 
 export default function Menu() {
 
