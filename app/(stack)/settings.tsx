@@ -28,7 +28,7 @@ export default function settings() {
     URLHH='https://yt3.googleusercontent.com/ytc/AIdro_l_0RH7fBbJuJ227nz-WUdobkVIEexa-2w0fc0XHzvtA-g=s160-c-k-c0x00ffffff-no-rj'
     tituloHH='duccline'
     subtituloHH='Ver perfil'
-    onPressHH={()=> {}}
+    onPressHH={()=> router.push('/profile')}
     />
 
     <View style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
