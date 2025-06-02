@@ -6,7 +6,7 @@ import ConfigButton from '../assets/components/Buttons/ConfigButton';
 import ProfileButton from '../assets/components/Buttons/ProfileButton';
 import { router } from 'expo-router';
 
-export default function settings() {
+export default function SettingsHH() {
 
   return(
     <LinearGradient
