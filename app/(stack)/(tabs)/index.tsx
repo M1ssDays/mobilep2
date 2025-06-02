@@ -4,9 +4,9 @@ import { StyleSheet, Text, View, Dimensions, ScrollView, FlatList } from 'react-
 import { LinearGradient } from 'expo-linear-gradient'
 import Produto from '../../components/MusicaCard'
 import { musicasDataHH } from '../../components/musicas';
-import AlbumButton from '../../assets/components/AlbumButton'
-import IconButton from '../../assets/components/IconButton'
-import PodcastButton from '../../assets/components/PodcastButton'
+import AlbumButton from '../../assets/components/Buttons/AlbumButton'
+import IconButton from '../../assets/components/Buttons/IconButton'
+import PodcastButton from '../../assets/components/Buttons/PodcastButton'
 import { router } from 'expo-router';
 
 

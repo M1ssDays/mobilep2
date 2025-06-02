@@ -2,8 +2,8 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient'
-import ConfigButton from '../assets/components/ConfigButton';
-import ProfileButton from '../assets/components/ProfileButton';
+import ConfigButton from '../assets/components/Buttons/ConfigButton';
+import ProfileButton from '../assets/components/Buttons/ProfileButton';
 import { router } from 'expo-router';
 
 export default function settings() {
@@ -11,9 +11,9 @@ export default function settings() {
   return(
     <LinearGradient
     colors={['rgba(25, 20, 20, 1)', 'rgba(25, 20, 20, 1)']}
-    locations={[0.85, 1]}
-    start={{x:1, y:1}}
-    end={{x:0, y:0}}
+    locations={[0.7, 1]}
+    start={{x:0.5, y:1}}
+    end={{x:0.5, y:0}}
     style={styles.containerHH}
     >
     
