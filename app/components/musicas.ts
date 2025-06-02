@@ -1,7 +1,7 @@
-import epic from './assets/epic.jpg';
-import lembrancas from './assets/saintjuvi.jpg'
+import epic from '../assets/images/epic.jpg';
+import lembrancas from '../assets/images/saintjuvi.jpg'
 
-export const musicasHH = [
+export const musicasDataHH = [
     {
         idHH: 'msc1',
         tituloHH: 'Suffering',
@@ -12,7 +12,7 @@ export const musicasHH = [
         idHH: 'msc2',
         tituloHH: 'Different Beast',
         artistaHH: 'Jorge Rivera-Herrans',
-        capaDaMusicaHH: '',
+        capaDaMusicaHH: epic,
     },
     {
         idHH: 'msc3',
@@ -39,3 +39,23 @@ export const musicasHH = [
         capaDaMusicaHH: lembrancas,
     },
 ]
+
+export const buscaHH = [
+    {
+        idHH:'arts1',
+        tipoHH: 'arts',
+        nomeHH: 'Jorge Rivera-Herrans',
+    },
+    {
+        idHH:'arts1',
+        tipoHH: 'arts',
+        nomeHH: 'Saint Juvi',
+    },
+
+]
+
+export const perfilHH = {
+    nomeHH: 'Heloisa Kadota',
+    fotoHH: epic,//colocar imagem,
+    
+}

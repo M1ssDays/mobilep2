@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, ScrollView, FlatList } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient'
-import AlbumButton from '../assets/components/Buttons/AlbumButton'
-import IconButton from '../assets/components/Buttons/IconButton'
-import PodcastButton from '../assets/components/Buttons/PodcastButton'
+import Produto from '../../components/MusicaCard'
+import { musicasDataHH } from '../../components/musicas';
+import AlbumButton from '../../assets/components/Buttons/AlbumButton'
+import IconButton from '../../assets/components/Buttons/IconButton'
+import PodcastButton from '../../assets/components/Buttons/PodcastButton'
+import { router } from 'expo-router';
 
-export default function Menu() {
+
+export default function HomeHH() {
+
+  const musicasinicioHH: ArrayLike<any> | null | undefined = [
+
+  ]
 
   return(
     <LinearGradient
@@ -20,13 +28,20 @@ export default function Menu() {
       <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
         <Text style={styles.titleHH}>Boa tarde</Text>
         <View style={{flexDirection: 'row', padding: 20, gap: 10}}>
-            <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/appointment-reminders--v2.png"/>
+            <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/appointment-reminders--v2.png "/>
             <IconButton URLHH = "https://img.icons8.com/m_outlined/200/FFFFFF/clock.png"/>
-            <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/settings.png"/>
+            <IconButton URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/settings.png"
+              onPressHH={() => router.push('/settings')}
+            />
         </View>
       </View>
 
       <View style={styles.viewGenericaHH}>
+       {/* <FlatList
+          data={musicasinicioHH}
+          keyExtractor={(item) => item.id}
+         renderItem={({item}) => <musicasDataHH urlHH={item.urlHH} tituloHH={item.tituloHH} artistaHH={item.artistaHH}}
+        />*/}
         <AlbumButton
         textoHH = "epic"
         URLHH = "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
