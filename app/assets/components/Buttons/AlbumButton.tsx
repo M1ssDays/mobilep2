@@ -1,19 +1,22 @@
 import React from "react";
-import { TouchableOpacity, StyleSheet, Image, Text } from "react-native";
+import { TouchableOpacity, StyleSheet, Image, Text, ImageSourcePropType } from "react-native";
 
-interface Props {
-URLHH?: string
-textoHH: string;
-onPressHH?: () => void;
+interface AlbumButtonPropsHH {
+    albumCoverUrlHH: ImageSourcePropType;
+    albumTitleHH: string;
+    artistNameHH: string;
+    onPressHH?: () => void;
 }
 
-export default function AlbumButton(props:Props){
+export default function AlbumButton({ albumCoverUrlHH, albumTitleHH, artistNameHH, onPressHH }: AlbumButtonPropsHH){
     return(
-        <TouchableOpacity style={styles.containerHH} onPress={props.onPressHH}>
-            <Image 
-            style = {styles.imageHH}
-            source = {{uri: props.URLHH}}/>
-            <Text style = {styles.textHH}>{props.textoHH}</Text>
+        <TouchableOpacity style={styles.containerHH} onPress={onPressHH}>
+            <Image
+                style = {styles.imageHH}
+                // Corrected line: Use the destructured 'albumCoverUrlHH' directly
+                source = {albumCoverUrlHH || require('../../assets/images/placeholder.png')}
+            />
+            <Text style = {styles.textHH}>{albumTitleHH}</Text>
         </TouchableOpacity>
     );
 }

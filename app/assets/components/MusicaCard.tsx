@@ -1,23 +1,24 @@
 import React from "react";
-import { Image, ImageSourcePropType, StyleSheet, Text, View } from "react-native";
+import { Image, ImageSourcePropType, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 
 type DadosMusicaHH = {
     urlHH: ImageSourcePropType;
     tituloHH?: string;
     artistaHH?: string;
+    onPressHH?: () => void;
 };
 
-export default function MusicaHH({urlHH, artistaHH, tituloHH}: DadosMusicaHH){
+export default function MusicaHH({urlHH, artistaHH, tituloHH, onPressHH}: DadosMusicaHH){
     return(
-        <View style={styles.cardHH}>
+         <TouchableOpacity style={styles.cardHH} onPress={onPressHH}>
             {urlHH && <Image source={urlHH} style={styles.imagemHH}/>}
 
-            <View>
+            <View style={styles.textoContainerHH}>
                 <Text style={styles.tituloHH}>{tituloHH}</Text>
                 <Text style={styles.artistaHH}>{artistaHH}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 }
 
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     cardHH:{
         flexDirection:'row',
         alignItems: 'center',
-        backgroundColor:'#0071a5',
+        backgroundColor:'#282828',
         padding:10,
         borderRadius:10,
         marginBottom:10,
@@ -45,5 +46,9 @@ const styles = StyleSheet.create({
     artistaHH:{
         fontSize: 14,
         color: '#ccc',
+    },
+    textoContainerHH: {
+        flex: 1,
+        justifyContent: 'center',
     },
 })

@@ -2,9 +2,9 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient'
-import ConfigButton from '../assets/components/Buttons/ConfigButton';
-import PlaylistButton from '../assets/components/Buttons/PlaylistButton';
-import ProfileCard from '../assets/components/ProfileCard';
+import ConfigButton from '../app/assets/components/Buttons/ConfigButton'
+import PlaylistButton from '../app/assets/components/Buttons/PlaylistButton';
+import ProfileCard from '../app/assets/components/ProfileCard';
 
 export default function Profile() {
 

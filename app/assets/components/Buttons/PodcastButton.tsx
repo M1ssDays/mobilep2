@@ -1,8 +1,8 @@
 import React from "react";
-import { TouchableOpacity, StyleSheet, Image, Text } from "react-native";
+import { TouchableOpacity, StyleSheet, Image, Text, ImageSourcePropType } from "react-native";
 
 interface Props {
-URLHH?: string;
+URLHH?: ImageSourcePropType;
 tituloHH: string;
 subtituloHH: string;
 onPressHH?: () => void;
@@ -13,7 +13,8 @@ export default function PodcastButton(props:Props){
         <TouchableOpacity style={styles.containerHH} onPress={props.onPressHH}>
             <Image 
             style = {styles.imageHH}
-            source = {{uri: props.URLHH}}/>
+            source = {props.URLHH || require('../../assets/images/placeholder.png')}
+            />
             <Text style = {styles.titleHH}>{props.tituloHH}</Text>
             <Text style = {styles.subtitleHH}>{props.subtituloHH}</Text>
         </TouchableOpacity>

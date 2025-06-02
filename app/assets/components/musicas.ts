@@ -1,5 +1,5 @@
-import epic from '../assets/images/epic.jpg';
-import lembrancas from '../assets/images/saintjuvi.jpg'
+import epic from '../images/epic.jpg';
+import lembrancas from '../images/saintjuvi.jpg'
 
 export const musicasDataHH = [
     {
