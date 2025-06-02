@@ -14,7 +14,7 @@ export default function AlbumButton({ albumCoverUrlHH, albumTitleHH, artistNameH
             <Image
                 style = {styles.imageHH}
                 // Corrected line: Use the destructured 'albumCoverUrlHH' directly
-                source = {albumCoverUrlHH || require('../../assets/images/placeholder.png')}
+                source = {albumCoverUrlHH || require('../../images/placeholder.png')}
             />
             <Text style = {styles.textHH}>{albumTitleHH}</Text>
         </TouchableOpacity>

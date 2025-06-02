@@ -13,7 +13,7 @@ export default function PodcastButton(props:Props){
         <TouchableOpacity style={styles.containerHH} onPress={props.onPressHH}>
             <Image 
             style = {styles.imageHH}
-            source = {props.URLHH || require('../../assets/images/placeholder.png')}
+            source = {props.URLHH || require('../../images/placeholder.png')}
             />
             <Text style = {styles.titleHH}>{props.tituloHH}</Text>
             <Text style = {styles.subtitleHH}>{props.subtituloHH}</Text>
