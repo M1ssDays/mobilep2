@@ -1,15 +1,26 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 
-export default function SearchBar(){
-    const[texto, setTexto] = useState('');
+interface SearchBarPropsHH {
+    valueHH: string; 
+    onChangeTextHH: (text: string) => void;
+    placeholderHH?: string; 
+}
+
+export default function SearchBar({ valueHH, onChangeTextHH, placeholderHH = 'Procurar...' }: SearchBarPropsHH){
     return(
         <View style={styles.containerHH}>
             <View style={styles.subcontainerHH}>   
                 <Image source={{uri: 'https://img.icons8.com/ios7/600/FFFFFF/search.png'}} style={styles.imageHH}/>
-                <TextInput placeholder='Procurar...' onChangeText={setTexto} value={texto} style={styles.inputHH}/>
+                <TextInput 
+                    placeholder={placeholderHH} 
+                    onChangeText={onChangeTextHH} 
+                    value={valueHH} 
+                    style={styles.inputHH}
+                    placeholderTextColor="#aaa"
+                />
             </View>
-            <TouchableOpacity onPress={()=> {setTexto('')}}>
+            <TouchableOpacity onPress={()=> {onChangeTextHH('')}}>
                 <Image source={{uri: 'https://img.icons8.com/m_rounded/512/FFFFFF/delete-sign.png'}} style={styles.imageHH}/>
             </TouchableOpacity>
         </View>
