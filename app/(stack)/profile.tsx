@@ -37,17 +37,17 @@ export default function ProfileHH() {
     <View style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', gap: 15}}>
         <Text style={styles.titleHH}>Playlists</Text>
         <PlaylistButton
-        URLHH='https://www.svgrepo.com/show/508699/landscape-placeholder.svg'
+        URLHH='https://www.peticao.online/uploads/images/sagaspic.jpg'
         textoHH='EPIC The Musical favs'
         subtextoHH='3 saves'
         />
         <PlaylistButton
-        URLHH='https://www.svgrepo.com/show/508699/landscape-placeholder.svg'
-        textoHH='sever the skyline (coloca img de celeste)'
+        URLHH='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwyx-v2DcTvIHiBBmhms8st-jnnzU_MEU7-A&s'
+        textoHH='sever the skyline'
         subtextoHH='9 saves'
         />  
         <PlaylistButton
-        URLHH='https://www.svgrepo.com/show/508699/landscape-placeholder.svg'
+        URLHH='https://cdn-images.dzcdn.net/images/cover/540d20e3340ed5fa827ff3816cdb71f5/0x1900-000000-80-0-0.jpg'
         textoHH='breakcore'
         subtextoHH='2 saves'
         />

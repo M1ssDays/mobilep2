@@ -83,7 +83,8 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         width: '100%',
         paddingHorizontal: 20,
-        gap: 10,
+        gap: 30,
+        flexDirection: 'column'
     },
     noResultsTextHH: {
         color: '#ccc',

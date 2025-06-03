@@ -1,5 +1,5 @@
-import epic from '../../P2mobile/app/assets/images/epic.jpg';
-import lembrancas from '../../P2mobile/app/assets/images/saintjuvi.jpg'
+import epic from '../app/assets/images/epic.jpg';
+import lembrancas from '../app/assets/images/saintjuvi.jpg'
 
 export const musicasDataHH = [
     {

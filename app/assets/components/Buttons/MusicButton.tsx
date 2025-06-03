@@ -30,7 +30,7 @@ export default function MusicButton(props:Props){
 const styles = StyleSheet.create({
     containerHH:{
         height: 50,
-        width: '90%',
+        width: 380,
         flexDirection: "row",
         alignItems: 'center',
         justifyContent: 'space-between',
