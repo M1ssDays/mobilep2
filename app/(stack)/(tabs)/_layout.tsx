@@ -1,7 +1,9 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { StyleSheet } from "react-native";
+import { Image, StyleSheet } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons'; 
+
+const spotifyIconHH = require('../../../app/assets/images/spotify.png');
 
 export default function TabsLayoutHH(){
     return(
@@ -35,6 +37,17 @@ export default function TabsLayoutHH(){
                 options={{
                     title:'Sua Biblioteca',
                     tabBarIcon: ({ color }) => <MaterialIcons name="library-music" size={24} color={color} />, 
+                }}
+            />
+            <Tabs.Screen
+                name="premiun" 
+                options={{
+                    title: 'Premium', 
+                    tabBarIcon: ({ size, color }) => ( 
+                        <Image
+                            source={spotifyIconHH}
+                            style={{ tintColor: color, width: size, height: size }}                         />
+                    ),
                 }}
             />
         </Tabs>
