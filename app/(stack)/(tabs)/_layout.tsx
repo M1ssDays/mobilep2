@@ -43,10 +43,10 @@ export default function TabsLayoutHH(){
                 name="premiun" 
                 options={{
                     title: 'Premium', 
-                    tabBarIcon: ({ size, color }) => ( 
+                    tabBarIcon: ({ }) => ( 
                         <Image
                             source={spotifyIconHH}
-                            style={{ tintColor: color, width: size, height: size }}                         />
+                            style={{width: 24, height: 24}}                         />
                     ),
                 }}
             />
