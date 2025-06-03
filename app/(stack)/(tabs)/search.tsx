@@ -1,21 +1,24 @@
-import React, { useMemo, useState } from 'react';
+// app/P2mobile/app/(stack)/(tabs)/search.tsx
+
+import React, { useState, useMemo } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, SafeAreaView } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient'
-import MusicButton from '../../assets/components/Buttons/MusicButton';
-import SearchBar from '../../assets/components/SearchBar';
+import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+// Importe o componente SearchBar corretamente
+import SearchBar from '../../../app/assets/components/SearchBar'; // Caminho corrigido
+import MusicButton from '../../../app/assets/components/Buttons/MusicButton'; // Caminho corrigido
 import { router } from 'expo-router';
-import { musicasDataHH } from '../../assets/components/musicas';
 
-const epic = require('../../assets/images/epic.jpg');
-const saint = require('../../assets/images/saintjuvi.jpg');
+// Importe musicasDataHH (já verificamos este caminho)
+import { musicasDataHH } from '../../../data/musicas';
 
-export default function SearchHH() {
-  const [searchQueryHH, setSearchQueryHH] = useState('');
+export default function SearchScreenHH() { // Renomeado para evitar confusão com o componente SettingsHH se ele existir
+    const [searchQueryHH, setSearchQueryHH] = useState('');
 
-  const filteredMusicasHH = useMemo(() => {
+    const filteredMusicasHH = useMemo(() => {
         if (!searchQueryHH) {
-            return musicasDataHH; 
+            return musicasDataHH;
         }
         const lowerCaseQueryHH = searchQueryHH.toLowerCase();
         return musicasDataHH.filter(
@@ -33,79 +36,59 @@ export default function SearchHH() {
             onPressHH={() => console.log('Playing:', item.tituloHH)}
         />
     );
-  return(
-    <SafeAreaView style={styles.safeAreaHH}>
-    <LinearGradient
-    colors={['rgba(25, 20, 20, 1)', '#1E142D']}
-    locations={[0.7, 1]}
-    start={{x:0.5, y:1}}
-    end={{x:0.5, y:0}}
-    style={styles.containerHH}
-    >
-    
-    <SearchBar
+
+    return (
+        <LinearGradient
+            colors={['rgba(25, 20, 20, 1)', '#1E142D']}
+            locations={[0.7, 1]}
+            start={{ x: 0.5, y: 1 }}
+            end={{ x: 0.5, y: 0 }}
+            style={styles.containerHH}
+        >
+            <SearchBar // Use o componente SearchBar aqui
                 valueHH={searchQueryHH}
                 onChangeTextHH={setSearchQueryHH}
                 placeholderHH="Pesquisar músicas ou artistas"
             />
-    {searchQueryHH.length > 0 && filteredMusicasHH.length === 0 ? (
+
+            {searchQueryHH.length > 0 && filteredMusicasHH.length === 0 ? (
                 <Text style={styles.noResultsTextHH}>Nenhum resultado encontrado para "{searchQueryHH}"</Text>
             ) : null}
 
-            {/* FlatList para exibir os resultados filtrados */}
             <FlatList
-                data={filteredMusicasHH} // Exibe os dados filtrados
+                data={filteredMusicasHH}
                 renderItem={renderMusicItemHH}
                 keyExtractor={(item) => item.idHH}
                 contentContainerStyle={styles.musicListContainerHH}
                 showsVerticalScrollIndicator={false}
             />
-    
-    <StatusBar style="auto" />
-    </LinearGradient>
-    </SafeAreaView>
-  );
+
+            <StatusBar style="auto" />
+        </LinearGradient>
+    );
 }
 
 const styles = StyleSheet.create({
-  containerHH: {
-    flex: 1,
-    alignItems: 'center',
-    gap: 10,
-  },
-
-  titleHH:{
-    fontSize: 24,
-    fontWeight: 600,
-    color: '#fff',
-    marginLeft: 20
-  },
-
-  iconbarHH:{
-    flexDirection: 'row',
-    width: '100%',
-    height: 100
-  },
-
-  viewGenericaHH:{
-    flexDirection: 'row', 
-    gap: 15,
-  },
-musicListContainerHH: {
+    containerHH: {
+        flex: 1,
+        alignItems: 'center',
+    },
+    titleHH: {
+        fontSize: 24,
+        fontWeight: '600',
+        color: '#fff',
+        marginLeft: 20,
+    },
+    musicListContainerHH: {
         paddingVertical: 10,
         width: '100%',
         paddingHorizontal: 20,
-        gap: 10, 
+        gap: 10,
     },
     noResultsTextHH: {
         color: '#ccc',
         fontSize: 16,
         marginTop: 20,
         textAlign: 'center',
-    },
-    safeAreaHH: {
-        flex: 1, // Faz o SafeAreaView ocupar toda a tela
-        backgroundColor: 'black', // Cor de fundo para o SafeAreaView se o gradiente não cobrir tudor
-    },
+    }
 });
-

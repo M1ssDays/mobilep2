@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     },
 
     imageHH:{
-        borderRadius: '50%',
+        borderRadius: 50,
         height: 90,
         width: 90
     },

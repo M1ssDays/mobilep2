@@ -58,7 +58,7 @@ export default function HomeHH() {
                         <IconButtonHH URLHH = "https://img.icons8.com/m_outlined/200/FFFFFF/clock.png"/>
                         <IconButtonHH
                             URLHH = "https://img.icons8.com/m_outlined/512/FFFFFF/settings.png"
-                            onPressHH={() => router.push('/settings')}
+                            onPressHH={() => router.push('./settingstela')}
                         />
                     </View>
                 </View>

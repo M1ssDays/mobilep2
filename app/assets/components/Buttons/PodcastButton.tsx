@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         gap: 5,
         alignItems: 'center',
-        // justifyContent: 'center'
     },
 
     imageHH:{

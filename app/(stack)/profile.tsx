@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import ConfigButton from '../assets/components/Buttons/ConfigButton';
 import PlaylistButton from '../assets/components/Buttons/PlaylistButton';
 import ProfileCard from '../assets/components/ProfileCard';
+import { router } from 'expo-router';
 
 export default function ProfileHH() {
 
@@ -18,7 +19,7 @@ export default function ProfileHH() {
     >
     
     <View style={{margin: 20, display: 'flex', flexDirection: 'row', width: '90%', height: 30, justifyContent: 'space-between', alignItems: 'center', alignSelf: 'center'}}>
-        <TouchableOpacity onPress={()=> {}}>
+        <TouchableOpacity onPress={()=> router.back()}>
             <Image source={{uri: 'https://cdn1.iconfinder.com/data/icons/arrows-jumpicon-glyph/32/-_Double_Left-Arrow-Direction-Back-Move-512.png'}} style={{width: 20, height: 20}}/>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=> {}}>

@@ -10,7 +10,7 @@ export default function MainStackLayoutHH() {
     >
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="profile" options={{ title: 'Seu Perfil' }} />
-      <Stack.Screen name="settings" options={{ title: 'Configurações' }} />
+      <Stack.Screen name="settingstela" options={{ title: 'Configurações' }} />
     </Stack>
   );
 }

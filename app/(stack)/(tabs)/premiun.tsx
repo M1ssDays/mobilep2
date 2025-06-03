@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-export default function SearchScreenHH() {
+export default function PremiunHH() {
     return (
         <View style={styles.containerHH}>
             <Text style={styles.textHH}>Premium, não tenho, não tenho referencias nem nada, obrigado pela atenção</Text>

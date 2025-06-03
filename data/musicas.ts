@@ -1,5 +1,5 @@
-import epic from '../images/epic.jpg';
-import lembrancas from '../images/saintjuvi.jpg'
+import epic from '../../P2mobile/app/assets/images/epic.jpg';
+import lembrancas from '../../P2mobile/app/assets/images/saintjuvi.jpg'
 
 export const musicasDataHH = [
     {
@@ -56,6 +56,6 @@ export const buscaHH = [
 
 export const perfilHH = {
     nomeHH: 'Heloisa Kadota',
-    fotoHH: epic,//colocar imagem,
+    fotoHH: epic,
     
 }

@@ -5,9 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import MusicButton from '../app/assets/components/Buttons/MusicButton'; // Renamed from MusicaHH to MusicButton
 import SearchBar from '../app/assets/components/SearchBar';
 import { router } from 'expo-router';
-
-// Import your data from musicas.ts
-import { musicasDataHH } from '../app/assets/components/musicas'; // Path already correct
+import { musicasDataHH } from '../data/musicas';
 
 export default function SettingsHH() {
     // Renomeado para searchQueryHH e setSearchQueryHH
