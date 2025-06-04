@@ -1,14 +1,14 @@
 import React from "react";
 import { TouchableOpacity, StyleSheet, Image, Text, ImageSourcePropType } from "react-native";
 
-interface Props {
+interface PropsHH {
 URLHH?: ImageSourcePropType;
 tituloHH: string;
 subtituloHH: string;
 onPressHH?: () => void;
 }
 
-export default function PodcastButton(props:Props){
+export default function PodcastButton(props:PropsHH){
     return(
         <TouchableOpacity style={styles.containerHH} onPress={props.onPressHH}>
             <Image 

@@ -1,19 +1,15 @@
-// app/P2mobile/app/(stack)/(tabs)/search.tsx
-
 import React, { useState, useMemo } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-// Importe o componente SearchBar corretamente
 import SearchBar from '../../../app/assets/components/SearchBar'; // Caminho corrigido
 import MusicButton from '../../../app/assets/components/Buttons/MusicButton'; // Caminho corrigido
 import { router } from 'expo-router';
 
-// Importe musicasDataHH (já verificamos este caminho)
 import { musicasDataHH } from '../../../data/musicas';
 
-export default function SearchScreenHH() { // Renomeado para evitar confusão com o componente SettingsHH se ele existir
+export default function SearchScreenHH() { 
     const [searchQueryHH, setSearchQueryHH] = useState('');
 
     const filteredMusicasHH = useMemo(() => {
@@ -45,21 +41,21 @@ export default function SearchScreenHH() { // Renomeado para evitar confusão co
             end={{ x: 0.5, y: 0 }}
             style={styles.containerHH}
         >
-            <SearchBar // Use o componente SearchBar aqui
+            <SearchBar
                 valueHH={searchQueryHH}
                 onChangeTextHH={setSearchQueryHH}
                 placeholderHH="Pesquisar músicas ou artistas"
             />
 
             {searchQueryHH.length > 0 && filteredMusicasHH.length === 0 ? (
-                <Text style={styles.noResultsTextHH}>Nenhum resultado encontrado para "{searchQueryHH}"</Text>
+                <Text style={styles.semResultadosHH}>Nenhum resultado encontrado para "{searchQueryHH}"</Text>
             ) : null}
 
             <FlatList
                 data={filteredMusicasHH}
                 renderItem={renderMusicItemHH}
                 keyExtractor={(item) => item.idHH}
-                contentContainerStyle={styles.musicListContainerHH}
+                contentContainerStyle={styles.musicasHH}
                 showsVerticalScrollIndicator={false}
             />
 
@@ -79,14 +75,14 @@ const styles = StyleSheet.create({
         color: '#fff',
         marginLeft: 20,
     },
-    musicListContainerHH: {
+    musicasHH: {
         paddingVertical: 10,
         width: '100%',
         paddingHorizontal: 20,
         gap: 30,
         flexDirection: 'column'
     },
-    noResultsTextHH: {
+    semResultadosHH: {
         color: '#ccc',
         fontSize: 16,
         marginTop: 20,

@@ -1,11 +1,11 @@
 import React from "react";
 import { TouchableOpacity, StyleSheet, Image, Text } from "react-native";
 
-interface Props {
+interface PropsHH {
 textHH: string
 }
 
-export default function ConfigButton(props:Props){
+export default function ConfigButton(props:PropsHH){
     return(
         <TouchableOpacity style={styles.containerHH}>
             <Text style={styles.textHH}>{props.textHH}</Text>

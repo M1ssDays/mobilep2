@@ -1,14 +1,14 @@
 import React from "react";
 import { TouchableOpacity, StyleSheet, Image, Text, View, ImageSourcePropType } from "react-native";
 
-interface Props {
+interface PropsHH {
 URLHH?: ImageSourcePropType;
 textoHH: string;
 subtextoHH: string;
 onPressHH?: () => void;
 }
 
-export default function MusicButton(props:Props){
+export default function MusicButton(props:PropsHH){
     return(
         <TouchableOpacity style={styles.containerHH} onPress={props.onPressHH}>
             <View style = {styles.subcontainerHH}>

@@ -13,7 +13,7 @@ export default function TabsLayoutHH(){
                 tabBarActiveTintColor: '#1DB954', 
                 tabBarInactiveTintColor: '#B3B3B3',
                 tabBarStyle: styles.tabBarHH,
-                tabBarLabelStyle: styles.tabBarLabelHH,
+                tabBarLabelStyle: styles.textoHH,
             }}
         >
             <Tabs.Screen
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0,
         height: 60,
     },
-    tabBarLabelHH:{
+    textoHH:{
         fontSize: 12,
         marginBottom: 5,
     },

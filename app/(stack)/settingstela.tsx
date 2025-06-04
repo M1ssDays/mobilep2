@@ -62,12 +62,6 @@ const styles = StyleSheet.create({
     marginLeft: 20
   },
 
-  iconbarHH:{
-    flexDirection: 'row',
-    width: '100%',
-    height: 100
-  },
-
   viewGenericaHH:{
     flexDirection: 'row', 
     gap: 15,

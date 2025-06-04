@@ -1,14 +1,14 @@
 import React from "react";
 import { TouchableOpacity, StyleSheet, Image, Text, ImageSourcePropType } from "react-native";
 
-interface AlbumButtonPropsHH {
+interface PropsHH {
     albumCoverUrlHH: ImageSourcePropType;
     albumTitleHH: string;
     artistNameHH: string;
     onPressHH?: () => void;
 }
 
-export default function AlbumButton({ albumCoverUrlHH, albumTitleHH, artistNameHH, onPressHH }: AlbumButtonPropsHH){
+export default function AlbumButton({ albumCoverUrlHH, albumTitleHH, artistNameHH, onPressHH }: PropsHH){
     return(
         <TouchableOpacity style={styles.containerHH} onPress={onPressHH}>
             <Image

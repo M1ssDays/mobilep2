@@ -1,14 +1,14 @@
 import React from "react";
 import { TouchableOpacity, StyleSheet, Image, Text, View } from "react-native";
 
-interface Props {
+interface PropsHH {
 URLHH?: string;
 tituloHH: string;
 buttonHH: string;
 onPressHH?: () => void;
 }
 
-export default function ProfileCard(props:Props){
+export default function ProfileCard(props:PropsHH){
     return(
         <TouchableOpacity style={styles.containerHH} onPress={props.onPressHH}>
             <Image

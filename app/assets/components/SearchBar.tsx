@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 
-interface SearchBarPropsHH {
+interface PropsHH {
     valueHH: string; 
     onChangeTextHH: (text: string) => void;
     placeholderHH?: string; 
 }
 
-export default function SearchBar({ valueHH, onChangeTextHH, placeholderHH = 'Procurar...' }: SearchBarPropsHH){
+export default function SearchBar({ valueHH, onChangeTextHH, placeholderHH = 'Procurar...' }: PropsHH){
     return(
         <View style={styles.containerHH}>
             <View style={styles.subcontainerHH}>   

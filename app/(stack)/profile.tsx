@@ -74,12 +74,6 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start'
   },
 
-  iconbarHH:{
-    flexDirection: 'row',
-    width: '100%',
-    height: 100
-  },
-
   viewGenericaHH:{
     flexDirection: 'row', 
     gap: 15,

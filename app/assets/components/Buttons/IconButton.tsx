@@ -1,12 +1,12 @@
 import React from "react";
 import { TouchableOpacity, StyleSheet, Image, Text } from "react-native";
 
-interface Props {
+interface PropsHH {
 URLHH?: string
 onPressHH?: () => void;
 }
 
-export default function IconButton(props:Props){
+export default function IconButton(props:PropsHH){
     return(
         <TouchableOpacity style={styles.container} onPress={props.onPressHH}>
             <Image 

@@ -8,36 +8,36 @@ import AlbumButton from '../../assets/components/Buttons/AlbumButton';
 import { router } from 'expo-router';
 
 const localPlaceholderImage = require('../../assets/images/placeholder.png');
-const balela = require('../../assets/images/balela.jpg');
-const orv = require('../../assets/images/ovr.jpg');
-const magnum = require('../../assets/images/magnun.jpg');
-const roxana = require('../../assets/images/roxana.jpg');
-const hollow = require('../../assets/images/hollow knight.jpg');
-const epic = require('../../assets/images/epic.jpg');
-const saint = require('../../assets/images/saintjuvi.jpg');
+const balelaHH = require('../../assets/images/balela.jpg');
+const orvHH = require('../../assets/images/ovr.jpg');
+const magnumHH = require('../../assets/images/magnun.jpg');
+const roxanaHH = require('../../assets/images/roxana.jpg');
+const hollowHH = require('../../assets/images/hollow knight.jpg');
+const epicHH = require('../../assets/images/epic.jpg');
+const saintHH = require('../../assets/images/saintjuvi.jpg');
 
 const episodiosDataHH = [
-    { idHH: 'epi1', coverHH:  balela, titleHH: 'Balela podcast ep 1', artistHH: 'Calango' },
-    { idHH: 'epi2', coverHH: orv, titleHH: 'Omniscient Reader ', artistHH: 'Spoiler' },
-    { idHH: 'epi3', coverHH:  magnum, titleHH: 'Magnum Archives ', artistHH: 'Magnum' },
-    { idHH: 'epi4', coverHH: roxana, titleHH: 'Roxana ep 49', artistHH: 'Roxana' },
-    { idHH: 'epi5', coverHH: hollow, titleHH: 'Hollow Knight ep 10', artistHH: 'Team Cherry' },
+    { idHH: 'epi1', coverHH:  balelaHH, titleHH: 'Balela podcast ep 1', artistHH: 'Calango' },
+    { idHH: 'epi2', coverHH: orvHH, titleHH: 'Omniscient Reader ', artistHH: 'Spoiler' },
+    { idHH: 'epi3', coverHH:  magnumHH, titleHH: 'Magnum Archives ', artistHH: 'Magnum' },
+    { idHH: 'epi4', coverHH: roxanaHH, titleHH: 'Roxana ep 49', artistHH: 'Roxana' },
+    { idHH: 'epi5', coverHH: hollowHH, titleHH: 'Hollow Knight ep 10', artistHH: 'Team Cherry' },
 ];
 
 const recomendadosDataHH = [
-    { idHH: 'rec1', coverHH: epic, titleHH: 'Suffering', subtitleHH: 'Jorge Rivera-Herrans' },
-    { idHH: 'rec2', coverHH: epic, titleHH: 'Different Beast', subtitleHH: 'Jorge Rivera-Herrans' },
-    { idHH: 'rec3', coverHH: epic, titleHH: 'Scylla', subtitleHH: 'Jorge Rivera-Herrans' },
-    { idHH: 'rec4', coverHH: epic, titleHH: 'Mutiny', subtitleHH: 'Jorge Rivera-Herrans' },
-    { idHH: 'rec5', coverHH: epic, titleHH: 'Thunder Bringer', subtitleHH: 'Jorge Rivera-Herrans' },
-    { idHH: 'rec6', coverHH: saint, titleHH: 'Lembranças', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec1', coverHH: epicHH, titleHH: 'Suffering', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec2', coverHH: epicHH, titleHH: 'Different Beast', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec3', coverHH: epicHH, titleHH: 'Scylla', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec4', coverHH: epicHH, titleHH: 'Mutiny', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec5', coverHH: epicHH, titleHH: 'Thunder Bringer', subtitleHH: 'Jorge Rivera-Herrans' },
+    { idHH: 'rec6', coverHH: saintHH, titleHH: 'Lembranças', subtitleHH: 'Jorge Rivera-Herrans' },
 ];
 
 const musicasBoaTardeDataHH = [
-    { idHH: 'bt1', coverHH: saint, titleHH: 'Sangue', subtitleHH: 'Saint Juvi' },
-    { idHH: 'bt2', coverHH: saint, titleHH: 'Faça Eles Sentirem', subtitleHH: 'Saint Juvi' },
-    { idHH: 'bt3', coverHH: saint, titleHH: 'Gal', subtitleHH: 'Saint Juvi' },
-    { idHH: 'bt4', coverHH: saint, titleHH: 'Enpap', subtitleHH: 'Saint Juvi' },
+    { idHH: 'bt1', coverHH: saintHH, titleHH: 'Sangue', subtitleHH: 'Saint Juvi' },
+    { idHH: 'bt2', coverHH: saintHH, titleHH: 'Faça Eles Sentirem', subtitleHH: 'Saint Juvi' },
+    { idHH: 'bt3', coverHH: saintHH, titleHH: 'Gal', subtitleHH: 'Saint Juvi' },
+    { idHH: 'bt4', coverHH: saintHH, titleHH: 'Enpap', subtitleHH: 'Saint Juvi' },
 ];
 
 export default function HomeHH() {
@@ -63,40 +63,40 @@ export default function HomeHH() {
                     </View>
                 </View>
 
-                <View style={styles.boaTardeGridHH}>
+                <View style={styles.boaTardeHH}>
                     {musicasBoaTardeDataHH.map((item) => (
                         <AlbumButton 
                             key={item.idHH}
                             albumCoverUrlHH={item.coverHH}
                             albumTitleHH={item.titleHH}
                             artistNameHH={item.subtitleHH} 
-                            onPressHH={() => console.log('Clicou na música do Boa Tarde:', item.titleHH)}
+                            onPressHH={() => console.log('clicou na música do boa tarde:', item.titleHH)}
                         />
                     ))}
                 </View>
 
-                <Text style={styles.sectionTitleHH}>Episódios para você</Text>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.horizontalListContainerHH}>
+                <Text style={styles.titleHH}>Episódios para você</Text>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.podcastsHH}>
                     {episodiosDataHH.map((item) => (
                         <PodcastButtonHH 
                             key={item.idHH}
                             URLHH={item.coverHH} 
                             tituloHH={item.titleHH} 
                             subtituloHH={item.artistHH}
-                            onPressHH={() => console.log('Clicou no episódio:', item.titleHH)}
+                            onPressHH={() => console.log('clicou no episódio:', item.titleHH)}
                         />
                     ))}
                 </ScrollView>
 
-                <Text style={styles.sectionTitleHH}>Recomendado para hoje</Text>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.horizontalListContainerHH}>
+                <Text style={styles.titleHH}>Recomendado para hoje</Text>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.podcastsHH}>
                     {recomendadosDataHH.map((item) => (
                         <PodcastButtonHH 
                             key={item.idHH}
                             URLHH={item.coverHH} 
                             tituloHH={item.titleHH} 
                             subtituloHH={item.subtitleHH} 
-                            onPressHH={() => console.log('Clicou na música:', item.titleHH)}
+                            onPressHH={() => console.log('clicou na música:', item.titleHH)}
                         />
                     ))}
                 </ScrollView>
@@ -124,22 +124,9 @@ const styles = StyleSheet.create({
         marginTop: 20, 
         marginLeft: 20
     },
-    sectionTitleHH: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        color: '#fff',
-        alignSelf: 'flex-start',
-        marginLeft: 20,
-        marginTop: 20,
-        marginBottom: 10,
-    },
-    horizontalListContainerHH: {
+    podcastsHH: {
         paddingHorizontal: 15,
         gap: 15,
-    },
-    gridListContainerHH: {
-        paddingHorizontal: 10,
-        justifyContent: 'space-between',
     },
     viewGenericaHH:{ 
         flexDirection: 'row',
@@ -148,20 +135,7 @@ const styles = StyleSheet.create({
         width: '100%', 
         flexWrap: 'wrap', 
     },
-     horizontalScrollContainerHH: {
-        paddingHorizontal: 15,
-        gap: 10,
-    },
-     gridScrollContainerHH: {
-        paddingHorizontal: 10,
-    },
-    gridRowHH: { 
-        flexDirection: 'row',
-        flexWrap: 'wrap', 
-        justifyContent: 'space-between', 
-        gap: 10,
-    },
-    boaTardeGridHH: {
+    boaTardeHH: {
         flexDirection: 'row',
         flexWrap: 'wrap', 
         justifyContent: 'space-between', 
