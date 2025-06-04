@@ -19,8 +19,8 @@ export default function ProfileCard(props:PropsHH){
                 <Text style={{color: '#fff'}}>{props.buttonHH}</Text>
             </TouchableOpacity>
             <View style={{flexDirection: 'row', width: '100%', justifyContent: 'space-between'}}>
-                <Text style={{textAlign: 'center', color: '#aaa'}}>7<br/>seguidores</Text>
-                <Text style={{textAlign: 'center', color: '#aaa'}}>33<br/>seguindo</Text>
+                <Text style={{textAlign: 'center', color: '#aaa'}}>7{"\n"}seguidores</Text>
+                <Text style={{textAlign: 'center', color: '#aaa'}}>33{"\n"}seguindo</Text>
             </View>
         </TouchableOpacity>
     );
